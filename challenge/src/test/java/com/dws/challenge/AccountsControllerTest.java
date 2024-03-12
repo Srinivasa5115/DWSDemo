@@ -111,7 +111,7 @@ class AccountsControllerTest {
 
   @Test
   @DisplayName("POST /account/{fromAccountId}/transfers - bad request")
-  public void whenTransferringAndAmountMissing_thenReturnBadRequest() throws IOException, Exception {
+  public void whenTransferringAndAmountMissing_thenReturnBadRequest() throws  Exception {
 
     String toAccountId = "Id-" + System.currentTimeMillis();
     Account account = new Account(toAccountId, new BigDecimal("0"));
@@ -123,7 +123,7 @@ class AccountsControllerTest {
 
   @Test
   @DisplayName("POST /account/{fromAccountId}/transfers - Insufficient balance")
-  public void whenTransferringAndInsufficientBalanceInAccount_thenReturnBadRequest() throws IOException, Exception {
+  public void whenTransferringAndInsufficientBalanceInAccount_thenReturnBadRequest() throws Exception {
     //create mock data
     String toAccountId = "Id-" + System.currentTimeMillis();
     Account account = new Account(toAccountId, new BigDecimal("100"));
